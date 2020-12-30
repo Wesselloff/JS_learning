@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    function getRandomInt(min, max) {
+        // Функцию честно утащил с сайта developer.mozilla.org
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; // Максимум и минимум включаются
+    }
+
+    function sum(a, b) {
+        // Сложение
+        return a + b;
+    }
+    function sub(a, b) {
+        // Вычитание
+        return a - b;
+    }
+    function mul(a, b) {
+        // Умножение
+        return a * b;
+    }
+    function div(a, b) {
+        // Деление
+        if (b != 0)
+            return a / b;
+        else
+            return 'Попытка деления на ноль';
+    }
+
+    function mathOperation(arg1, arg2, oper) {
+        switch (oper) {
+            case '+':
+                return sum(arg1, arg2);
+            case '-':
+                return sub(arg1, arg2);
+            case '*':
+                return mul(arg1, arg2);
+            case '/':
+                return div(arg1, arg2);
+            default:
+                return 'Неизвестная операция';
+
+        }
+    }
+    let a = getRandomInt(-100, 100);
+    let b = getRandomInt(-100, 100);
+    console.log('a = ' + a + ', b = ' + b);
+    console.log('Сумма        ' + mathOperation(a, b, '+'));
+    console.log('Разность     ' + mathOperation(a, b, '-'));
+    console.log('Произведение ' + mathOperation(a, b, '*'));
+    console.log('Частное      ' + mathOperation(a, b, '/'));
+    console.log('Факториал    ' + mathOperation(a, b, '!'));
+
+</script>
