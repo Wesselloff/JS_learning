@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    function getRandomInt(min, max) {
+        // Функцию честно утащил с сайта developer.mozilla.org
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; // Максимум и минимум включаются
+    }
+    let a = getRandomInt(-100, 100);
+    let b = getRandomInt(-100, 100);
+    console.log('a = ' + a + ', b = ' + b);
+    if (a >= 0 && b >= 0)
+        alert('Числа положительные, их разность равна ' + (a - b));
+    else if (a < 0 && b < 0)
+        alert('Числа отрицательные, их произведение равно ' + (a * b));
+    else
+        alert('Числа разных знаков, их сумма равна ' + (a + b));
+
+
+</script>

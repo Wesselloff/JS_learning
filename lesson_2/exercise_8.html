@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    function power(val, pow) {
+        if (pow == 0)
+            return 1;
+        else
+            return val * power(val, pow - 1);
+    }
+
+    let num = parseFloat(prompt('Введите число:'));
+    let pwr = parseInt(prompt('Введите степень. Целое неотрицательное число:'));
+    if (pwr < 0)
+        alert('Неверный ввод!');
+    else
+        alert('Число ' + num + ' в степени ' + pwr + ' равно ' + power(num, pwr));
+
+</script>

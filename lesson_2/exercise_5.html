@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    function getRandomInt(min, max) {
+        // Функцию честно утащил с сайта developer.mozilla.org
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; // Максимум и минимум включаются
+    }
+
+    function sum(a, b) {
+        // Сложение
+        return a + b;
+    }
+    function sub(a, b) {
+        // Вычитание
+        return a - b;
+    }
+    function mul(a, b) {
+        // Умножение
+        return a * b;
+    }
+    function div(a, b) {
+        // Деление
+        if (b != 0)
+            return a / b;
+        else
+            return 'Попытка деления на ноль';
+
+    }
+
+    let a = getRandomInt(-100, 100);
+    let b = getRandomInt(-100, 100);
+    console.log('a = ' + a + ', b = ' + b);
+    console.log('Сумма        ' + sum(a, b));
+    console.log('Разность     ' + sub(a, b));
+    console.log('Произведение ' + mul(a, b));
+    console.log('Частное      ' + div(a, b));
+
+</script>
