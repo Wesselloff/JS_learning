@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    function countBasketPrice(cart) {
+        let cartSum = 0;
+        for (let i in cart)
+            // Проверку наличия полей "price" и "count" не делал, т.к. пока не решил, нужно ли ее делать здесь 
+            // или же целостность структуры будет обеспечиваться в другом месте, например, при создании объекта товара
+            cartSum += cart[i].price * cart[i].count;
+
+        return cartSum
+    }
+
+    // Единица товара. Предположительно, будет браться из БД и содержать поля:
+    // id:    id товара в БД
+    // name:  название товара
+    // price: цена за единицу товара
+    // count: количество единиц товара в корзине, это поле берется не из БД
+    let goods = new Object;
+    // Корзина - массив из единиц товара
+    const cart = [];
+
+    // Заполним корзину вручную
+    // Формируем параметры товара 1
+    goods.id = 1;
+    goods.name = 'Товар 1';
+    goods.price = 250;
+    goods.count = 2;
+    // Добавляем в корзину
+    cart.push(goods);
+
+    // Формируем параметры товара 2
+    goods = new Object;
+    goods.id = 2;
+    goods.name = 'Товар 2';
+    goods.price = 1000;
+    goods.count = 5;
+    // Добавляем в корзину
+    cart.push(goods);
+
+    // Формируем параметры товара 3
+    goods = new Object;
+    goods.id = 3;
+    goods.name = 'Товар 3';
+    goods.price = 999.99;
+    goods.count = 3;
+    // Добавляем в корзину
+    cart.push(goods);
+
+    console.log(cart)
+    console.log(countBasketPrice(cart))
+</script>
