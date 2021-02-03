@@ -124,9 +124,9 @@ function checkForFruit() {
     xCor.unshift(xCor[0]);
     yCor.unshift(yCor[0]);
     numSegments++;
+    // Фрукт не менял своего положения в игре
+    updateFruitCoordinates()
   }
-  // Фрукт не менял своего положения в игре
-  updateFruitCoordinates()
 }
 
 function updateFruitCoordinates() {
